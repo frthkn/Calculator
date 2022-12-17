@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <div id="btn" class="anahat">
+
+
+        <table>
+            <tr>
+                <th id="inputs"></th>
+            </tr>
+            <tr>
+                <td><button id="btnClean" class="fa fa-c" onclick="clearInput()"></button></td>
+                <td><button id="btnPercent" class="fa fa-percent" onclick="powInput()"></button></td>
+                <td><button id="btnDelete" class="fa fa-delete-left" onclick="deleteNum()"></button></td>
+                <td><button id="btnPlus" class="fa fa-plus" onclick="insertNum('+')"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btnSeven" class="fa fa-7" onclick="insertNum(7)"></button></td>
+                <td><button id="btnEight" class="fa fa-8" onclick="insertNum(8)"></button></td>
+                <td><button id="btnNine" class="fa fa-9" onclick="insertNum(9)"></button></td>
+                <td><button id="btnXmark" class="fa fa-xmark" onclick="insertNum('*')"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btnFour" class="fa fa-4" onclick="insertNum(4)"></button></td>
+                <td><button id="btnFive" class="fa fa-5" onclick="insertNum(5)"></button></td>
+                <td><button id="btnSix" class="fa fa-6" onclick="insertNum(6)"></button></td>
+                <td><button id="btnMinus" class="fa fa-minus" onclick="insertNum('-')"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btnOne" class="fa fa-1" onclick="insertNum(1)"></button></td>
+                <td><button id="btnTwo" class="fa fa-2" onclick="insertNum(2)"></button></td>
+                <td><button id="btnThree" class="fa fa-3" onclick="insertNum(3)"></button></td>
+                <td><button id="btnDivide" class="fa fa-divide" onclick="insertNum('/')"></button></td>
+            </tr>
+            <tr>
+                <td><button id="btnZero" class="fa fa-0" style="width: 9rem;" onclick="insertNum(0)"></button></td>
+                <td><button id="btnComma" class="fa fa-comma" onclick="insertNum(',')">.</button></td>
+                <td><button id="btnEquals" class="fa fa-equals" onclick="equalTo()"></button></td>
+            </tr>
+        </table>
+
+
+    </div>
+    <script>
+        const input = document.querySelector('#inputs');
+
+        const insertNum = num => input.textContent += num;
+        const equalTo = () => (input.textContent) ? input.textContent = eval(input.textContent) : false;
+
+        const deleteNum = () => input.textContent = input.textContent.substring(0, input.textContent.length - 1);
+
+        const clearInput = () => input.textContent = '';
+
+        const powInput = ()=> (input.textContent) ? input.textContent = eval(input.textContent*0.01):false;
+
+
+    </script>
+</body>
+
+</html>
