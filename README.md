@@ -1,9 +1,7 @@
 # Calculator
-Simple Calculator
 
-#This is a simple calculator, I made it by HTML, CSS and Javascript. 
-
-#check gif
+This is a simple calculator, I made it by HTML, CSS and Javascript. 
+Check gif
 
 
 
